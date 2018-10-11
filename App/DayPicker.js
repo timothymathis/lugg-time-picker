@@ -87,7 +87,7 @@ export class DayPicker extends React.Component {
   }
 
   _dayOfWeek = (date) => {
-    let daysFromToday = moment(date, Metrics.dateFormat).diff(moment().format(), 'days');
+    let daysFromToday = Math.ceil(moment(date, Metrics.dateFormat).diff(moment().format(), 'hours') / 24);
 
     switch(daysFromToday) {
       case 0:
