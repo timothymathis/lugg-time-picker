@@ -7,8 +7,10 @@ import {
   SafeAreaView,
   StatusBar
 } from "react-native";
+import { DayPicker } from "./DayPicker";
 
 import { Color, Font } from "./constants";
+import ArrivalTimes from "./constants/Mock";
 
 const Button = ({ onPress, children, ...props }) => {
   return (
@@ -23,17 +25,22 @@ const Button = ({ onPress, children, ...props }) => {
 };
 
 class App extends React.Component {
+
+  _selectArrivalTime = (selectedArrivalTime) => {
+    console.log(selectedArrivalTime);
+  }
+
   render() {
     return (
       <View style={Styles.Container}>
         <StatusBar barStyle="light-content" />
         <View style={Styles.Header}>
           <Text style={Styles.HeaderText}>
-            Welcome to the React Native Lugg Exercise!
+            Welcome to the React Native Lugg Exercise.
           </Text>
         </View>
         <View style={Styles.Body}>
-          <Text>Your Component Here</Text>
+          <DayPicker dates={ArrivalTimes} onSelect={this._selectArrivalTime}></DayPicker>
         </View>
         <View style={Styles.Footer}>
           <Button style={Styles.Button}>Next</Button>
@@ -56,7 +63,6 @@ const Styles = StyleSheet.create({
   Footer: {},
   Body: {
     height: 248,
-    backgroundColor: "red",
     alignItems: "center",
     justifyContent: "center"
   },
