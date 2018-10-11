@@ -1,3 +1,4 @@
 import Color from "./Color";
 import Font from "./Font";
-export { Color, Font };
+import Metrics from "./Metrics";
+export { Color, Font, Metrics };
