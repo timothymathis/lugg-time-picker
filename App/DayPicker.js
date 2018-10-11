@@ -187,7 +187,7 @@ const Styles = StyleSheet.create({
     flexBasis: Metrics.screenWidth / 3,
     flexDirection: "column",
     alignItems: "center",
-    padding: 16,
+    padding: 12,
     textAlign: "center",
     backgroundColor: Color.primary,
   },
