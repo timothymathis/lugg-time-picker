@@ -95,7 +95,7 @@ export class DayPicker extends React.Component {
       case 1:
         return "Tomorrow";
       default:
-        return moment(date, Metrics.dateFormat).format("ddd");
+        return moment(date, Metrics.dateFormat).format("dddd");
     }
   }
 
